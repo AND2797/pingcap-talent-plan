@@ -2,9 +2,10 @@ use clap::{Parser, Subcommand};
 use kvs::KvStore;
 
 #[derive(Parser, Debug)]
+#[command(version)]
 struct Args {
     #[command(subcommand)]
-    command: Option<Commands>,
+    command: Option<Commands>
 }
 
 #[derive(Subcommand)]
@@ -19,6 +20,8 @@ enum Commands {
     },
     Rm {
         key: String
+    },
+    V {
     }
 }
 
@@ -35,6 +38,9 @@ fn main() {
             println!("unimplemented")
         }
         Commands::Rm{key} => {
+            println!("unimplemented")
+        }
+        Commands::V {} => {
             println!("unimplemented")
         }
     }
