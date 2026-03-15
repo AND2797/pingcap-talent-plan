@@ -21,27 +21,23 @@ enum Commands {
     Rm {
         key: String
     },
-    V {
-    }
 }
 
 
 fn main() {
     let args = Args::parse();
     let parsed = args.command.unwrap();
+    let mut store = KvStore::new();
 
     match parsed {
         Commands::Set{key, value} => {
-            println!("unimplemented")
+            store.set(key, value);
         }
         Commands::Get{key} => {
-            println!("unimplemented")
+            let got = store.get(key);
         }
         Commands::Rm{key} => {
-            println!("unimplemented")
-        }
-        Commands::V {} => {
-            println!("unimplemented")
+            store.remove(key);
         }
     }
 }
