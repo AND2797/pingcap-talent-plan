@@ -2,8 +2,11 @@
 name = "kvs"
 version = "0.1.0"
 edition = "2024"
-author = ["Aditya Das"]
+authors = ["Aditya Das"]
 description = "A key-value store"
+
+[dependencies]
+clap = { version = "4.6.0", features = ["derive"] }
 
 [dev-dependencies]
 assert_cmd = "0.11.0"

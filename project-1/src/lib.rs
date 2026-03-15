@@ -10,15 +10,15 @@ impl KvStore {
     pub fn new() -> KvStore {
         panic!();
     }
-    pub fn get(&self, key: String) -> Option<String> {
+    pub fn get(&self, _key: String) -> Option<String> {
         panic!();
     }
 
-    pub fn set(&mut self, key: String, val: String) {
+    pub fn set(&mut self, _key: String, _val: String) {
        panic!()
     }
 
-    pub fn remove(&mut self, key: String) {
+    pub fn remove(&mut self, _key: String) {
         panic!()
     }
 }
